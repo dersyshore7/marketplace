@@ -1,0 +1,58 @@
+/* Deal Analyzer Styles */
+
+.deal-analyzer-badge {
+  position: relative;
+  z-index: 1000;
+}
+
+.deal-analyzer-modal {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.deal-analyzer-modal h3 {
+  color: #1c1e21;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.deal-analyzer-modal p {
+  margin: 8px 0;
+  color: #65676b;
+  font-size: 14px;
+}
+
+.deal-analyzer-modal button:hover {
+  background: #166fe5 !important;
+}
+
+/* Ensure badges don't interfere with Facebook's layout */
+[data-testid="marketplace-item"] {
+  position: relative !important;
+}
+
+/* Loading indicator for price analysis */
+.deal-analyzer-loading {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #1877f2;
+  border-radius: 50%;
+  animation: deal-analyzer-spin 1s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes deal-analyzer-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .deal-analyzer-modal > div {
+    margin: 20px;
+    width: calc(100% - 40px) !important;
+  }
+}
